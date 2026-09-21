@@ -1,47 +1,57 @@
-import Navbarlocais from '../components/Navbar-locais.jsx'
-import Fotocatete from '../assets/fotocatete.png'
+import LayoutCev from '../components/LayoutCev'
+import { cevs } from '../data/cevs'
 
+function CentroTijuca() {
+  const cev = cevs.tijuca
 
-
-
-function Centrocatete() {
-  
-
-  
   return (
-    <div>
-      <Navbarlocais />
+    <LayoutCev
+      nome={cev.nome}
+      categoria={cev.categoria}
+      imagem={cev.imagem}
+      endereco={cev.endereco}
+    >
 
-    
-    
-      <div className="centro-destaque">
-        <img src={Fotocatete} alt="Foto do Centro de Evangelização Shalom - Catete" className="centro-foto" />                
-          <div className="centro-info">
+      <span className="cev-section-kicker">
+        SOBRE O LOCAL
+      </span>
 
-            <h1>Shalom Tijuca</h1>
+      <h2>
+        Shalom presente na Tijuca.
+      </h2>
 
-            <p>
-              Centro de Evangelização Shalom
-            </p>
+      <p>
+        Este espaço reúne a comunidade para momentos
+        de oração, convivência, formação e missão.
+      </p>
 
-            <p>
-              Rua Bento Lisboa, 112
-            </p>
+      <div className="cev-info-block">
+        <h3>Horários</h3>
 
-            <p>
-              Rio de Janeiro - RJ
-            </p>
+        <p>
+          Em breve disponibilizaremos os horários
+          atualizados deste centro.
+        </p>
+      </div>
 
-            <p>
-              Horários e informações
-            </p>
+      <div className="cev-address-card">
 
-          </div>
+        <span>
+          COMO CHEGAR
+        </span>
+
+        <strong>
+          Tijuca
+        </strong>
+
+        <p>
+          Rio de Janeiro - RJ
+        </p>
 
       </div>
-    </div>
 
-  );
+    </LayoutCev>
+  )
 }
 
-export default Centrocatete;
+export default CentroTijuca

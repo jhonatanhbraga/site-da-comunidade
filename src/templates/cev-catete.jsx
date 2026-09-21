@@ -1,61 +1,115 @@
-import Navbarlocais from '../components/Navbar-locais.jsx'
-import Fotocatete from '../assets/fotocatete.png'
+import LayoutCev from '../components/LayoutCev'
+import { cevs } from '../data/cevs'
 
+function CentroCatete() {
+  const cev = cevs.catete
 
-
-
-function Centrocatete() {
-  
-
-  
   return (
-    <div>
-      <Navbarlocais />
+    <LayoutCev
+      nome={cev.nome}
+      categoria={cev.categoria}
+      imagem={cev.imagem}
+      endereco={cev.endereco}
+    >
 
-    
-    
-      <div className="centro-destaque">
-        <img src={Fotocatete} alt="Foto do Centro de Evangelização Shalom - Catete" className="centro-foto" />                
-          <div className="centro-info">
+      <span className="cev-section-kicker">
+        SOBRE O LOCAL
+      </span>
 
-            <h1>Shalom Catete - Lanchonete e livraria </h1>
+      <h2>
+        Um espaço de encontro com Deus
+        e com a comunidade.
+      </h2>
 
-            <p>
-              Centro de Evangelização Comunidade católica Shalom 
-            </p>
-            <p>
-              SEGUNDA A SÁBADO DE 15:00 ÀS 21:00 com o Santíssmo exposto para adoração
-            </p>
-            <p>
-              Rua Bento Lisboa, 112, Catete, Rio de Janeiro - RJ
-            </p>
+      <p>
+        O Centro de Evangelização Shalom Catete é um
+        espaço de oração, convivência, formação e missão
+        no coração do Rio de Janeiro.
+      </p>
 
-            <h2></h2>
-            <p></p>
-
-
-
-            <h3>Missas</h3>
-
-            <p>Segundas e sextas as 18:00</p>
-            <p>Sábados as 15:30</p>
-            <p>Domingo as 11:00</p>
-
-            <h4>Grupos de Oração</h4>
-            <p>Grupos de jovens todos os sábados as 17:00 após a missa das 15:30</p>
-            <p>Grupo de oração para adultos todas as quintas as 20:00</p>
-            <p>Grupo de oração para casais todas as terças as 20:00</p>
-            <p>Grupo de oração para crianças todas as terças as 20:00 simultaneamente ao grupo de casais</p>
-            <p></p>
+      <p>
+        Durante a semana, o espaço recebe a comunidade
+        para momentos de oração, celebrações e grupos
+        de oração.
+      </p>
 
 
+      <div className="cev-info-block">
 
-          </div>
+        <h3>
+          Adoração
+        </h3>
+
+        <p>
+          Segunda a sábado, das 15h às 21h,
+          com o Santíssimo exposto para adoração.
+        </p>
 
       </div>
-    </div>
 
-  );
+
+      <div className="cev-info-block">
+
+        <h3>
+          Missas
+        </h3>
+
+        <ul>
+          <li>Segundas e sextas às 18h</li>
+          <li>Sábados às 15h30</li>
+          <li>Domingos às 11h</li>
+        </ul>
+
+      </div>
+
+
+      <div className="cev-info-block">
+
+        <h3>
+          Grupos de oração
+        </h3>
+
+        <ul>
+          <li>
+            Jovens — sábados às 17h,
+            após a missa das 15h30
+          </li>
+
+          <li>
+            Adultos — quintas às 20h
+          </li>
+
+          <li>
+            Casais — terças às 20h
+          </li>
+
+          <li>
+            Crianças — terças às 20h,
+            simultaneamente ao grupo de casais
+          </li>
+        </ul>
+
+      </div>
+
+
+      <div className="cev-address-card">
+
+        <span>
+          COMO CHEGAR
+        </span>
+
+        <strong>
+          Rua Bento Lisboa, 112
+        </strong>
+
+        <p>
+          Catete · Rio de Janeiro - RJ
+        </p>
+
+      </div>
+
+    </LayoutCev>
+  )
 }
 
-export default Centrocatete;
+export default CentroCatete

@@ -201,3 +201,539 @@ img { max-width: 100%; }
   .landing-footer { grid-template-columns: 1fr; gap: 22px; }
   .footer-links { flex-wrap: wrap; }
 }
+
+
+/* =========================================================
+   PÁGINAS DOS CENTROS DE EVANGELIZAÇÃO
+========================================================= */
+
+.cev-page {
+  min-height: 100vh;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+
+/* HEADER */
+
+.cev-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 5vw;
+
+  color: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, .65),
+    transparent
+  );
+}
+
+.cev-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.cev-brand img {
+  width: 58px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.cev-brand span {
+  font-size: 15px;
+}
+
+.cev-nav {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cev-nav a {
+  color: rgba(255,255,255,.9);
+  text-decoration: none;
+
+  padding: 10px 14px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: .2s ease;
+}
+
+.cev-nav a:hover {
+  background: rgba(255,255,255,.13);
+}
+
+.cev-nav-button {
+  background: #fff !important;
+  color: var(--navy) !important;
+  padding-inline: 18px !important;
+}
+
+
+/* HERO */
+
+.cev-hero {
+  min-height: 620px;
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  color: #fff;
+}
+
+.cev-hero-image {
+  position: absolute;
+  inset: 0;
+}
+
+.cev-hero-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.cev-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,12,40,.9),
+      rgba(7,22,74,.48),
+      rgba(7,22,74,.15)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(4,12,40,.8),
+      transparent 65%
+    );
+}
+
+.cev-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  padding:
+    150px 0
+    85px;
+}
+
+.cev-back {
+  display: inline-flex;
+
+  color: rgba(255,255,255,.78);
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  margin-bottom: 50px;
+}
+
+.cev-back:hover {
+  color: #fff;
+}
+
+.cev-kicker {
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: .22em;
+  text-transform: uppercase;
+
+  color: #d9c59f;
+}
+
+.cev-hero h1 {
+  max-width: 850px;
+
+  margin: 0;
+
+  font-size: clamp(48px, 7vw, 90px);
+
+  line-height: .95;
+
+  letter-spacing: -.045em;
+
+  font-weight: 600;
+}
+
+.cev-address {
+  margin: 25px 0 0;
+
+  font-size: 17px;
+
+  color: rgba(255,255,255,.8);
+}
+
+
+/* CONTEÚDO */
+
+.cev-content {
+  padding: 110px 0;
+}
+
+.cev-content-grid {
+  width: min(1180px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    340px;
+
+  gap: 80px;
+}
+
+.cev-main-content {
+  max-width: 720px;
+}
+
+.cev-section-kicker {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: var(--blue);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: .2em;
+
+  text-transform: uppercase;
+}
+
+.cev-main-content h2 {
+  margin: 0 0 30px;
+
+  color: var(--navy);
+
+  font-size: clamp(38px, 5vw, 62px);
+
+  line-height: 1;
+
+  letter-spacing: -.045em;
+}
+
+.cev-main-content p {
+  margin: 0 0 20px;
+
+  color: var(--muted);
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+.cev-info-block {
+  margin-top: 55px;
+
+  padding-top: 28px;
+
+  border-top: 1px solid var(--line);
+}
+
+.cev-info-block h3 {
+  margin: 0 0 14px;
+
+  color: var(--navy);
+
+  font-size: 25px;
+}
+
+.cev-info-block ul {
+  margin: 0;
+  padding-left: 20px;
+
+  color: var(--muted);
+
+  line-height: 1.8;
+}
+
+.cev-info-block li {
+  margin-bottom: 8px;
+}
+
+
+/* SIDEBAR */
+
+.cev-sidebar {
+  align-self: start;
+
+  position: sticky;
+
+  top: 40px;
+}
+
+.cev-sidebar-card {
+  padding: 35px;
+
+  border-radius: 26px;
+
+  background: var(--navy);
+
+  color: #fff;
+
+  box-shadow:
+    0 20px 60px rgba(7,22,74,.15);
+}
+
+.cev-sidebar-label {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #b8c8ff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: .18em;
+
+  text-transform: uppercase;
+}
+
+.cev-sidebar-card h2 {
+  margin: 0;
+
+  font-size: 32px;
+
+  line-height: 1.05;
+
+  letter-spacing: -.035em;
+}
+
+.cev-sidebar-card h2 em {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #e7cfa8;
+
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+
+  font-weight: 500;
+}
+
+.cev-sidebar-card p {
+  margin: 22px 0;
+
+  color: rgba(255,255,255,.7);
+
+  line-height: 1.7;
+}
+
+.cev-sidebar-button {
+  display: inline-flex;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  border-bottom: 1px solid rgba(255,255,255,.7);
+
+  padding-bottom: 5px;
+}
+
+
+/* ENDEREÇO */
+
+.cev-address-card {
+  margin-top: 55px;
+
+  padding: 30px;
+
+  border-radius: 22px;
+
+  background: #fff;
+
+  border: 1px solid var(--line);
+}
+
+.cev-address-card span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--blue);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: .18em;
+}
+
+.cev-address-card strong {
+  display: block;
+
+  color: var(--navy);
+
+  font-size: 20px;
+}
+
+.cev-address-card p {
+  margin: 5px 0 0;
+
+  font-size: 14px;
+}
+
+
+/* FOOTER */
+
+.cev-footer {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 35px 5vw;
+
+  background: var(--navy);
+
+  color: rgba(255,255,255,.7);
+}
+
+.cev-footer img {
+  width: 95px;
+  height: 42px;
+
+  object-fit: contain;
+  object-position: left center;
+}
+
+.cev-footer p {
+  margin: 5px 0 0;
+
+  font-size: 12px;
+}
+
+.cev-footer a {
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+  .cev-nav {
+    display: none;
+  }
+
+  .cev-hero {
+    min-height: 560px;
+  }
+
+  .cev-hero-content {
+    padding-bottom: 60px;
+  }
+
+  .cev-content-grid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .cev-sidebar {
+    position: static;
+  }
+
+  .cev-sidebar-card {
+    padding: 30px;
+  }
+
+  .cev-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .cev-header {
+    padding: 14px 20px;
+  }
+
+  .cev-brand span {
+    display: none;
+  }
+
+  .cev-hero-content {
+    width: min(
+      100% - 36px,
+      1180px
+    );
+  }
+
+  .cev-content-grid {
+    width: min(
+      100% - 36px,
+      1180px
+    );
+  }
+
+  .cev-content {
+    padding: 75px 0;
+  }
+
+  .cev-main-content h2 {
+    font-size: 42px;
+  }
+
+  .cev-sidebar-card h2 {
+    font-size: 29px;
+  }
+}
